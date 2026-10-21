@@ -1,0 +1,9 @@
+<h1>PERSIANA</h1>
+<p>Persiana id.: #1</p>
+@if (abierta) {
+<p>Estado: ABIERTA</p>
+} @else {
+<p>Estado: CERRADA</p>
+
+}
+<button (click)="onSubirBajar($event)">Subir</button>
