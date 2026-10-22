@@ -12,6 +12,7 @@ export class AppComponent {
   titulo = 'CONTROL DE VIVIENDA';
   corrienteVivienda = false;
   corrienteHab = false;
+  abierta = false;
 
   onConectarDesconectar(event: Event) {
 
@@ -22,12 +23,17 @@ export class AppComponent {
 
   }
 
-    onConectarDesconectarHab(event: Event) {
+  onConectarDesconectarHab(event: Event) {
 
     let conDes = event.target as HTMLButtonElement
 
     this.corrienteHab = !this.corrienteHab;
-    conDes.innerText = this.corrienteHab ? "Desconectar" : "Conectar";
+    conDes.innerText = this.corrienteHab ? "Desconectar corriente Hab #1" : "Conectar corriente Hab #1";
 
   }
+
+  onAbierta(abierta : boolean) {
+    this.abierta = abierta;
+  }
+
 }

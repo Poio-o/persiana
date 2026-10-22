@@ -10,13 +10,17 @@
     }
   </div>
 
-  <button (click)="onConectarDesconectarHab($event)">Conectar</button>
+  <button (click)="onConectarDesconectarHab($event)">Conectar corriente Hab #1</button>
   <div class="boton-leyenda">
     @if (this.corrienteHab) {
+    @if (this.abierta) {
     <span>Estado recibido: PERSIANA ABIERTA</span>
+    } @else {
+    <span>Estado recibido: PERSIANA CERRADA</span>
+    }
+    <app-habitacion (habitacionOutput)="onAbierta($event)"></app-habitacion>
     } @else {
     }
   </div>
 
-  <app-habitacion></app-habitacion>
 </div>

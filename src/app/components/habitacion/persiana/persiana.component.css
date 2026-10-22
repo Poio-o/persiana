@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* 1. Contenedor principal (Ahora en Flexbox Vertical) */
+.info-persiana-container, :host { 
+  display: flex;
+  flex-direction: column;      /* Alinea los textos arriba y el botón abajo */
+  align-items: stretch;        /* Hace que el botón ocupe todo el ancho disponible si se desea, o se puede alinear */
+  gap: 16px;                   /* Margen de separación uniforme entre el bloque de texto y el botón */
+  
+  background-color: #edf2f7;   
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid var(--color-primary); 
+}
+
+/* 2. Bloque de textos (Flexbox Vertical para los datos de la persiana) */
+.info-persiana {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;                   
+}
+
+/* 3. Ajustes de tipografía */
+.info-persiana h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  margin: 0;
+  text-align: left;
+  border: none;
+  padding: 0;
+}
+
+.info-persiana p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* 4. Botón estilizado debajo de los textos */
+button {
+  background-color: #4a5568;   
+  color: #ffffff;
+  padding: 12px;               /* Un poco más de padding vertical al ser un botón ancho */
+  width: 100%;                 /* Ocupa todo el ancho de la tarjeta para que sea más fácil pulsar en móviles o tablets */
+  font-size: 0.95rem;
+  align-self: center;          /* Centra el elemento en su eje */
+}
+
+button:hover {
+  background-color: #2d3748;   
+}

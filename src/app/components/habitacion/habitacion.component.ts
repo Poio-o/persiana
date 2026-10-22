@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { PersianaComponent } from './persiana/persiana.component';
 
 @Component({
@@ -8,8 +8,11 @@ import { PersianaComponent } from './persiana/persiana.component';
   styleUrl: './habitacion.component.css'
 })
 export class HabitacionComponent {
-onAbierta(event: Event) {
-  
+
+  habitacionOutput = output<boolean>();
+
+onAbierta(abierta: boolean) {
+      this.habitacionOutput.emit(abierta);
 }
 
 }
